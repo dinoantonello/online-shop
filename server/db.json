@@ -1,0 +1,46 @@
+{
+  "products": [
+				{
+					"id": 1,
+					"name":"Kayak",
+					"description": "A boat for watersports",
+					"price": 275,
+					"category": {
+						"id": 1,
+						"name":"Water Sports"		
+					}	
+				},
+				{
+					"id": 2,
+					"name":"Life Jacket",
+					"description": "A life saver for watersports",
+					"price": 48.95,
+					"category": {
+						"id": 1,
+						"name":"Water Sports"		
+					}	
+				},
+				{
+					"id": 3,
+					"name":"Bat Cricket",
+					"description": "A cricket bat",
+					"price": 100,
+					"category": {
+						"id": 2,
+						"name":"Cricket"		
+					}
+					
+				},
+				{
+					"id": 4,
+					"name":"Ball",
+					"description": "A cricket ball",
+					"price": 10,
+					"category": {
+						"id": 2,
+						"name":"Cricket"		
+					}
+					
+				}
+			]
+}

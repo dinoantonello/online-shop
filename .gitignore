@@ -1,0 +1,8 @@
+node_modules
+npm-debug.log
+.idea
+.vscode
+*.swp
+features/step_definitions/config.json
+.DS_Store
+scripts/config.local.json
