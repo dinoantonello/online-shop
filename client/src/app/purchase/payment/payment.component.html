@@ -1,0 +1,25 @@
+
+<section>
+
+  <h2>Payment</h2>
+  
+  
+
+  <form id="payment" name="payment" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" >
+    <div>
+      <label>Credit Card Number:</label>
+      <input type="text" name="creditCardNumber"  [(ngModel)]="payment.creditCardNumber" #creditCardNumber="ngModel" required />
+      
+      <div *ngIf="f.submitted && creditCardNumber.invalid" class="invalid-feedback">
+        <div *ngIf="creditCardNumber.errors.required">Credit Card Number is required</div>
+      </div> 
+    </div>
+    <div>
+      <button type="submit">Submit</button>
+      <a [routerLink]="['/customer-details-entry']">Back</a>
+    </div>
+  </form>
+
+
+</section>
+

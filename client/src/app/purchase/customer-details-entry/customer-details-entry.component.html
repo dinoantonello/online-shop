@@ -1,0 +1,32 @@
+
+<section>
+
+  <h2>Customer Entry Details</h2>
+  
+  
+
+  <form id="customer-detail" name="customer-detail" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" >
+    <div>
+      <label>First Name:</label>
+      <input type="text" name="firstname"  [(ngModel)]="customerDetails.firstname" #firstname="ngModel" required />
+      
+      <div *ngIf="f.submitted && firstname.invalid" class="invalid-feedback">
+        <div *ngIf="firstname.errors.required">First Name is required</div>
+      </div> 
+    </div>
+    <div>
+      <label>Surname:</label>
+       <input type="text" name="surname"  [(ngModel)]="customerDetails.surname" #surname="ngModel" required />
+       <div *ngIf="f.submitted && surname.invalid" class="invalid-feedback">
+          <div *ngIf="surname.errors.required">Surname is required</div>
+      </div>
+    </div> 
+    <div>
+      <button type="submit">Submit</button>
+      <a [routerLink]="['/catalogue']">Back</a>
+    </div>
+  </form>
+
+
+</section>
+

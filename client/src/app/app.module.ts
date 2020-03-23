@@ -3,6 +3,10 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { CatalogueModule } from './purchase/catalogue/catalogue.module';
+import { AppRoutingModule } from './app-routing.module';
+import { CustomerDetailsEntryModule } from './purchase/customer-details-entry/customerDetailsEntry.module';
+import { PaymentModule } from './purchase/payment/payment.module';
 
 
 @NgModule({
@@ -10,9 +14,9 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, CatalogueModule, AppRoutingModule, CustomerDetailsEntryModule, PaymentModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent] 
 })
 export class AppModule { }

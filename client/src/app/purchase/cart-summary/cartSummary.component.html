@@ -1,0 +1,24 @@
+
+<section>
+  <h3>My shopping cart</h3>
+
+  <span *ngIf="cart.cartItems.length == 0">( empty )</span>
+
+  <span *ngIf="cart.cartItems.length > 0">( {{cart.cartItems.length}} items )</span>
+  
+  <ul>
+     <li *ngFor="let item of cart.cartItems">
+       {{item.product.name}} 
+       <span class="remove-cart-item-link">( <a (click)="deleteItem(item.id)">Remove</a> )</span>
+     </li>
+  </ul>
+
+  <div class="cart-summary-total">
+    {{cart.currency}} {{cart.total}}
+  </div>
+
+  <a [routerLink]="['/customer-details-entry']">
+    Check Out 
+  </a>
+</section>
+

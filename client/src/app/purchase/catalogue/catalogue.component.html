@@ -1,0 +1,12 @@
+<cart-summary></cart-summary>
+
+<form>
+  <h2>Welcome to {{title}}</h2>
+  <li *ngFor="let product of products">
+   <h3 class="product-name">{{product.name}} </h3>  
+   <span class="product-price">{{product.currency}}{{product.price}}</span>
+    <span class="product-id">({{product.id}})</span>
+    <button  type="button" (click)="addToCart(product.id)">Add to cart</button>
+  
+  </li>
+</form>
